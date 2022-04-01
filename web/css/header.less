@@ -1,0 +1,182 @@
+@width: 1280px;
+@height: 48px;
+// 导航栏部分
+.global-nav {
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  border-top: 2px solid #fa7d3c;
+  box-shadow: 0 0 1px 0px rgb(0 0 0 / 30%), 0 0 6px 2px rgb(0 0 0 / 15%);
+  background: rgba(255, 255, 255, 0.94);
+
+  .nav {
+    width: @width;
+    height: @height;
+    margin: 0 auto;
+
+    .nav-left {
+      float: left;
+      background-color: #fff;
+
+      .nav-logo {
+        float: left;
+        width: 140px;
+
+        .logo-bg {
+          display: block;
+          margin-left: 30px;
+          margin-top: 10px;
+          width: 80px;
+          height: 28px;
+          background-size: 80px 28px;
+          background-image: url(../img/WB_logo-x2.png);
+        }
+      }
+      .search {
+        position: relative;
+        float: left;
+        width: 470px;
+        height: @height;
+        #input {
+          width: 423px;
+          height: 20px;
+          margin-top: 9px;
+          background-color: #f2f2f5;
+          border: 1px solid #ccc;
+          padding: 4px 33px 4px 10px;
+        }
+        #input:focus {
+          background-color: #fff;
+          border-color: #fa7d3c;
+        }
+        .icon-sousuo {
+          position: absolute;
+          top: 12px;
+          right: 10px;
+          font-size: 18px;
+        }
+        .dropdown {
+          display: none;
+          position: absolute;
+          z-index: 9998;
+          left: -1px;
+          top: 40px;
+          width: 470px;
+          height: 356px;
+          background-color: #fff;
+
+          .hot-search {
+            width: 464px;
+            height: 350px;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            padding: 2px;
+            box-shadow: 0px 2px 8px 1px rgb(0 0 0 / 20%);
+
+            .plus {
+              .hs-more {
+                display: block;
+                padding: 9px 32px 9px 13px;
+                color: #fa7d3c;
+              }
+
+              .selectbox {
+                margin-bottom: 0;
+                li {
+                  :hover {
+                    background-color: #f2f2f5;
+                    color: #eb7350;
+                  }
+
+                  a {
+                    padding: 9px 32px 9px 13px;
+                    white-space: nowrap;
+                    min-width: 50px;
+                    line-height: 1em;
+                    color: #333;
+                    display: block;
+                    cursor: pointer;
+                    text-decoration: none;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    .num-gray {
+                      display: inline-block;
+                      font-size: 12px;
+                      color: #fff;
+                      text-align: center;
+                      line-height: 14px;
+                      width: auto;
+                      min-width: 9px;
+                      padding: 0 2px;
+                      height: 13px;
+                      margin-right: 5px;
+                      border-radius: 6px;
+                      background: #696e78;
+                    }
+                    .num-red {
+                      background: #df3e3e;
+                    }
+                    .num-yellow {
+                      background: #fa7d3c;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .nav-right {
+      float: right;
+      width: 475px;
+      height: @height;
+      line-height: @height;
+      ul {
+        overflow: hidden;
+
+        li {
+          float: left;
+          margin-left: 26px;
+          font-size: 14px;
+          color: #696e78;
+        }
+        li:hover a {
+          color: #fa7d3c;
+        }
+        li:hover {
+          color: #fa7d3c;
+        }
+        .nav-line {
+          float: left;
+          width: 0;
+          height: 14px;
+          margin: 17px 0 0 26px;
+          border-left: 1px solid #d9d9d9;
+        }
+        .iconfont {
+          display: inline-block;
+          font-size: 22px;
+          vertical-align: top;
+          margin-right: 2px;
+        }
+        .icon-youxi {
+          line-height: 43px;
+        }
+      }
+    }
+  }
+}
+
+// 身体部分
+main {
+  width: 100%;
+  min-height: 1000px;
+}
+
+// 页面尾部

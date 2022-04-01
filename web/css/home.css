@@ -1,0 +1,75 @@
+.userintro {
+  background: url(../img/lv4.jpg) no-repeat;
+  background-size: 340px 230px;
+  position: relative;
+  height: 250px;
+}
+.userintro .ui-pic {
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%);
+}
+.userintro .ui-pic img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.userintro .ui-content {
+  position: absolute;
+  width: 340px;
+  top: 100px;
+  height: 80px;
+  background-color: #fff;
+  opacity: 80%;
+  text-align: center;
+}
+.userintro .ui-content .uid {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.userintro .ui-content ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.userintro .ui-content ul li {
+  float: left;
+  width: 65px;
+  text-align: center;
+}
+.userintro .ui-content ul li .num {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+}
+.userintro .ui-content ul li .txt2 {
+  display: block;
+  font-size: 12px;
+  color: #808080;
+}
+.userintro .ui-content ul .guanzhu {
+  margin-left: 10px;
+}
+.userintro .ui-content ul .fans {
+  border-right: 1px solid #d9d9d9;
+  border-left: 1px solid #d9d9d9;
+}
+#main {
+  position: relative;
+}
+#main .box {
+  float: left;
+  padding: 15px 0 0 15px;
+}
+#main .box .pic {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+#main .box .pic img {
+  width: 300px;
+  vertical-align: top;
+}
