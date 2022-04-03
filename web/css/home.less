@@ -1,0 +1,78 @@
+// 用户信息框
+.userintro {
+  background: url(../img/lv4.jpg) no-repeat;
+  background-size: 340px 230px;
+  position: relative;
+  height: 250px;
+  .ui-pic {
+    position: absolute;
+    left: 50%;
+    top: 25px;
+    transform: translateX(-50%);
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+  }
+  .ui-content {
+    position: absolute;
+    width: 340px;
+    top: 100px;
+    height: 80px;
+    background-color: #fff;
+    opacity: 80%;
+    text-align: center;
+    .uid {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      li {
+        float: left;
+        width: 65px;
+        text-align: center;
+        .num {
+          display: block;
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 18px;
+        }
+        .txt2 {
+          display: block;
+          font-size: 12px;
+          color: #808080;
+        }
+      }
+      .guanzhu {
+        margin-left: 10px;
+      }
+      .fans {
+        border-right: 1px solid #d9d9d9;
+        border-left: 1px solid #d9d9d9;
+      }
+    }
+  }
+}
+
+#main {
+  position: relative;
+  .box {
+    float: left;
+    padding: 15px 0 0 15px;
+    .pic {
+      padding: 10px;
+      border: 1px solid #ccc;
+      img {
+        width: 300px;
+        vertical-align: top;
+      }
+    }
+  }
+}

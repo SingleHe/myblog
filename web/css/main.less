@@ -1,0 +1,184 @@
+// 首页轮播图部分
+@width: 660px;
+
+.main-pic {
+  float: left;
+  margin-left: 140px;
+  width: auto;
+  /* 中间博客模块 */
+  .left-main {
+    float: left;
+    width: @width;
+    margin-right: 30px;
+    background-color: #fff;
+
+    // 轮播图模块
+    .blog-silder {
+      height: 300px;
+      position: relative;
+      margin-bottom: 8px;
+      overflow: hidden;
+
+      .swiper-container {
+        --swiper-theme-color: #fa7d3c;
+
+        .swiper-wrapper {
+          .swiper-slide {
+            .pic1 {
+              position: relative;
+              float: left;
+              width: 512px;
+              height: 288px;
+              margin-right: 8px;
+
+              a img {
+                width: 512px;
+                height: 223.172px;
+                background-color: #fff;
+              }
+              .pic-info {
+                height: 44px;
+                padding: 10px 10px 6px;
+                background: linear-gradient(transparent, #1f1f1f);
+                h3 {
+                  font-size: 18px;
+                  margin-bottom: 4px;
+                }
+                span {
+                  font-weight: normal;
+                  margin: 0 20px 0 0;
+                  color: white;
+                }
+              }
+            }
+            .pic2 {
+              position: relative;
+              float: left;
+              width: 140px;
+              height: 140px;
+              a img {
+                width: 140px;
+                height: 140px;
+              }
+              .pic-info {
+                height: 40px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                background: linear-gradient(transparent, #1f1f1f);
+              }
+            }
+            .pic3 {
+              position: relative;
+              float: left;
+              margin-top: 8px;
+              width: 140px;
+              height: 140px;
+              a img {
+                width: 140px;
+                height: 140px;
+              }
+              .pic-info {
+                height: 40px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                background: linear-gradient(transparent, #1f1f1f);
+              }
+            }
+            .pic-info {
+              text-align: left;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              color: white;
+              padding: 15px 8px 5px;
+            }
+          }
+        }
+      }
+    }
+
+    // 博客模块
+    .blog-content {
+      margin-bottom: 10px;
+      text-align: left;
+
+      .wait {
+        background-color: rgb(249, 255, 216);
+        height: 30px;
+        line-height: 30px;
+        color: #d63f3f;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .blog-item {
+        height: 102px;
+        border-bottom: 1px solid #e5e5e5;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        font-size: 0;
+        cursor: pointer;
+
+        .blog-pic {
+          float: left;
+          margin-right: 13px;
+          width: 158px;
+          height: 102px;
+
+          img {
+            width: 158px;
+            height: 102px;
+          }
+        }
+        .blog-des {
+          margin-top: 25px;
+          float: left;
+          width: 489px;
+          color: #808080;
+
+          .blog-title {
+            line-height: 24px;
+            font-size: 20px;
+            font-weight: 700;
+          }
+          .blog-sub {
+            height: 20px;
+            line-height: 20px;
+            margin-top: 10px;
+            font-size: 12px;
+            cursor: pointer;
+            a {
+              float: left;
+              margin-right: 5px;
+              color: #808080;
+              img {
+                display: inline-block;
+                vertical-align: top;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+              }
+            }
+            .time {
+              float: left;
+            }
+            .fr {
+              float: right;
+              .bico {
+                margin-right: 5px;
+                font-size: 16px;
+              }
+            }
+            .rgt-line {
+              width: 0;
+              height: 10px;
+              border-right: 1px solid #ccc;
+              margin: 6px 8px 0 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

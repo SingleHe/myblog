@@ -1,0 +1,457 @@
+/* 博客页面 */
+.bg-pic {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/freedom.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+.bg-pic .hid {
+  display: none;
+}
+.bg-pic .show {
+  display: block;
+}
+.bg-pic .blog-page {
+  width: 100%;
+}
+.bg-pic .blog-page .blog-frame {
+  width: 1000px;
+  background: #fff;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.bg-pic .blog-page .blog-frame .main-topic {
+  margin-top: 60px;
+  min-height: 2000px;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+  /* 文章部分 */
+}
+.bg-pic .blog-page .blog-frame .main-topic .topic-pic img {
+  width: 1000px;
+  height: 560px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical {
+  width: 700px;
+  margin: 0 auto;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi {
+  padding-top: 65px;
+  /* 文章部分 */
+  /* 关注博主 */
+  /* 推荐阅读 */
+  /* 转发评论模块 */
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .ar-title {
+  margin: 0 0 12px;
+  font-size: 30px;
+  word-wrap: break-word;
+  color: #000;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .authorinfo {
+  margin: 0 0 40px;
+  font-size: 12px;
+  line-height: 30px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .authorinfo .info-l {
+  float: left;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .authorinfo .info-l .userinfo img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 0 0;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .authorinfo .info-l .userinfo .aline {
+  border-color: #d9d9d9;
+  border-left-width: 1px;
+  border-left-style: solid;
+  width: 0;
+  overflow: hidden;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .authorinfo .info-l .userinfo .time {
+  color: #808080;
+  line-height: 30px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .authorinfo .info-r {
+  float: right;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .authorinfo .info-r .num {
+  color: #808080;
+  line-height: 30px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .main-text {
+  width: 700px;
+  height: auto;
+  margin: 0 0 40px;
+  overflow: hidden;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .main-text .main-text-pic {
+  margin: 40px 0;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .main-text .main-text-pic img {
+  width: 100%;
+  height: 500px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .main-text .justify {
+  font-size: 16px;
+  line-height: 1.75;
+  word-wrap: break-word;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .blogger {
+  height: 90px;
+  background: #f2f2f5;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .blogger .userbox {
+  padding: 20px;
+  position: relative;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .blogger .userbox .ub-pic {
+  float: left;
+  margin-right: 10px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .blogger .userbox .ub-pic img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .blogger .userbox .ub-info {
+  float: left;
+  width: 522px;
+  height: 40px;
+  padding: 5px 0 0;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .blogger .userbox .ub-info .i-title {
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .blogger .userbox .ub-info .i-sub {
+  height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 20px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .blogger .userbox .opt {
+  position: absolute;
+  width: 62px;
+  height: 26px;
+  right: 20px;
+  top: 31px;
+  text-align: center;
+  line-height: 26px;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .blogger .userbox .opt .add {
+  display: inline-block;
+  color: #fa7d3c;
+  font-size: 14px;
+  vertical-align: top;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .recommend {
+  margin-top: 40px;
+  padding: 40px 0 70px;
+  border-top: 1px solid #f2f2f5;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .recommend .r-title {
+  margin: 0 0 15px;
+  font-size: 16px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .recommend .r-content .r-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #f2f2f5;
+  border-radius: 0;
+  cursor: default;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .recommend .r-content .r-item .r-pic {
+  display: inline;
+  float: left;
+  width: 120px;
+  height: 90px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .recommend .r-content .r-item .r-pic img {
+  display: inline;
+  float: left;
+  width: 120px;
+  height: 90px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .recommend .r-content .r-item .r-info {
+  width: 580px;
+  height: 90px;
+  float: left;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .recommend .r-content .r-item .r-info .text-box {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .recommend .r-content .r-item .r-info .text-box .tb-title {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .recommend .r-content .r-item .r-info .text-box .r-text {
+  color: #808080;
+  display: -webkit-box;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun {
+  /* 评论区 */
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun a:hover {
+  color: #f77c3d;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .row {
+  border-top: 1px solid #f2f2f5;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .row li {
+  position: relative;
+  float: left;
+  line-height: 38px;
+  text-align: center;
+  width: 33.3%;
+  height: 38px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .row li a {
+  color: #808080;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .row li a .collect {
+  font-size: 16px;
+  color: #f77c3d;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .row li .record {
+  display: block;
+  height: 22px;
+  line-height: 22px;
+  margin: 7px 0;
+  border-left: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .row li .arrow {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  right: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 7px solid #f2f2f5;
+  content: ' ';
+  width: 2px;
+  height: 0;
+  margin: auto;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .row li .tico {
+  font-size: 16px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .row .like a {
+  color: #f77c3d;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment {
+  background-color: #f2f2f5;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  padding: 16px 0 6px;
+  border-top: 1px solid #d9d9d9;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment .comment-box {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment .comment-box .c-box #input {
+  position: relative;
+  margin: 0 0 10px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment .comment-box .c-box #input .txt-input {
+  height: 58px;
+  width: 98%;
+  margin: 0px;
+  padding: 5px 2px 20px 6px;
+  border: 1px solid #cccccc;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15) inset;
+  font-size: 12px;
+  line-height: 18px;
+  overflow: hidden;
+  outline: none;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+  color: #808080;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment .comment-box .c-box #input .txt-input:focus {
+  border-color: #fa7d3c !important;
+  box-shadow: none;
+  color: #333;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment .comment-box .c-box #input .limit {
+  position: absolute;
+  right: 12px;
+  bottom: 7px;
+  line-height: 18px;
+  color: #808080;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment .comment-box .c-btn {
+  float: right;
+  background: #ffc09f;
+  border: 1px solid #ffc09f;
+  color: #fff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  width: 40px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 0 10px 0 10px;
+  cursor: pointer;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list {
+  padding: 0 20px;
+  overflow: hidden;
+  border-top: 1px solid #d9d9d9;
+  text-align: center;
+  /* 留言板 */
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .empty {
+  padding: 16px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .empty .warn {
+  display: inline-block;
+  margin-bottom: 20px;
+  width: 38px;
+  height: 42px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .empty .warn .w-ico {
+  display: inline-block;
+  width: 38px;
+  height: 42px;
+  background-image: url(../img/icon-x2.png);
+  background-repeat: no-repeat;
+  background-size: 625px 325px;
+  background-position: -375px -100px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list {
+  padding-top: 20px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info {
+  margin-bottom: 20px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-img {
+  float: left;
+  padding-top: 6px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-img img {
+  width: 30px;
+  height: 30px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content {
+  margin-left: 10px;
+  float: left;
+  /* 回复模块 */
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content .ri-text {
+  display: inline-block;
+  width: 620px;
+  overflow: hidden;
+  line-height: 23px;
+  word-wrap: break-word;
+  text-align: left;
+  vertical-align: top;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content .ri-text .userid {
+  color: #eb7350;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content .ri-data .repo-date {
+  float: left;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content .ri-data .repo-fun {
+  float: right;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content .ri-data .repo-fun .reply {
+  float: right;
+  display: block;
+  margin: 2px 10px;
+  padding: 0 10px;
+  border-right: 1px solid #d9d9d9;
+  border-left: 1px solid #d9d9d9;
+  line-height: 12px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content .ri-data .repo-fun .appr {
+  float: right;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content .ri-data .repo-fun .appr .col {
+  color: #f77c3d;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content .reply-wrap {
+  position: relative;
+  width: 588px;
+  margin-top: 10px;
+  padding: 16px 16px 6px;
+  background-color: #fff;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content .reply-wrap .arrow2 {
+  position: absolute;
+  top: -5px;
+  right: 50px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 7px solid #fff;
+  content: ' ';
+  width: 2px;
+  height: 0;
+  margin: auto;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content .reply-wrap .publish #input {
+  position: relative;
+  margin: 0 0 10px;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content .reply-wrap .publish #input .rtxt-input {
+  height: 23px;
+  width: 98%;
+  margin: 0px;
+  padding: 5px 2px 0 6px;
+  border: 1px solid #cccccc;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15) inset;
+  font-size: 12px;
+  line-height: 18px;
+  overflow: hidden;
+  outline: none;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+  color: #808080;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content .reply-wrap .publish #input .rtxt-input:focus {
+  border-color: #fa7d3c !important;
+  box-shadow: none;
+  color: #333;
+}
+.bg-pic .blog-page .blog-frame .main-topic .artical .main-edi .three-fun .comment #repeat-list .repo-list .reuser-info .ri-content .reply-wrap .c-btn2 {
+  float: right;
+  background: #ffc09f;
+  border: 1px solid #ffc09f;
+  color: #fff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  width: 40px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 0 10px 0 10px;
+  cursor: pointer;
+}

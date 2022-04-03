@@ -1,0 +1,386 @@
+.ficon {
+  font-size: 20px;
+  width: 26px;
+  height: 30px;
+  color: #fff;
+}
+#flush {
+  position: fixed;
+  top: auto;
+  bottom: 90px;
+  right: 80px;
+  width: 40px;
+  height: 35px;
+  padding-top: 5px;
+  background-color: #696e78;
+  text-align: center;
+}
+#totop {
+  visibility: hidden;
+  position: fixed;
+  top: auto;
+  bottom: 40px;
+  right: 80px;
+  width: 40px;
+  height: 35px;
+  padding-top: 5px;
+  background-color: #696e78;
+  text-align: center;
+}
+.main {
+  margin-top: 50px;
+}
+.main .main-frame {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 16px 0 0 0;
+  text-align: center;
+}
+.main .main-frame .main-nav {
+  width: 110px;
+  height: 473px;
+  background: transparent;
+  position: fixed;
+  top: 66px;
+  bottom: auto;
+}
+.main .main-frame ul li {
+  margin-bottom: 3px;
+}
+.main .main-frame ul li .nav_item {
+  display: block;
+  font-size: 18px;
+  color: #000;
+  height: 40px;
+  line-height: 42px;
+  border-radius: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 8px;
+}
+.main .main-frame ul li .current,
+.main .main-frame ul li .nav_item:hover {
+  background: linear-gradient(128deg, #fa2f2f 0%, #ff5b36 90%);
+  color: #fff;
+}
+.right-main {
+  float: right;
+  width: 340px;
+  height: 1351.64px;
+  margin-right: 0;
+}
+.right-main .login-content {
+  margin-bottom: 20px;
+  width: 340px;
+  height: 326px;
+}
+.right-main .login-content .login-box {
+  /* display: none; */
+  background: #f2f2f5;
+  padding: 20px;
+}
+.right-main .login-content .login-box .login {
+  width: 270px;
+  height: 280px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  padding: 0 15px 6px 15px;
+}
+.right-main .login-content .login-box .login .login-inner .info {
+  position: relative;
+  width: 270px;
+  margin-bottom: 16px;
+  padding-top: 11px;
+  border-bottom: 1px solid #ccc;
+  border-bottom-color: rgba(204, 204, 204, 0.5);
+}
+.right-main .login-content .login-box .login .login-inner .info .tab {
+  float: left;
+  margin-bottom: -1px;
+  width: 50%;
+  height: 30px;
+  border-bottom: 3px solid transparent;
+  color: #808080;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.right-main .login-content .login-box .login .login-inner .info .cur {
+  border-bottom: 3px solid #fa7d3c;
+  color: #000;
+  font-weight: 700;
+}
+.right-main .login-content .login-box .login .login-inner .info .by-ewm {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/sprite_login.png);
+  background-repeat: no-repeat;
+  background-position: 0px -150px;
+  cursor: pointer;
+}
+.right-main .login-content .login-box .login .login-inner .form {
+  width: 270px;
+  height: 191px;
+  color: #808080;
+}
+.right-main .login-content .login-box .login .login-inner .form .form-list {
+  height: 28px;
+  padding: 2px 0;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+.right-main .login-content .login-box .login .login-inner .form .username {
+  background-image: url(../img/sprite_login.png);
+  background-position: 11px -91px;
+  background-repeat: no-repeat;
+}
+.right-main .login-content .login-box .login .login-inner .form .username #loginname {
+  margin-left: 34px;
+  width: 86%;
+  border: none;
+  box-shadow: none;
+  height: 28px;
+  line-height: normal;
+  padding: 0 0 0 2px;
+  vertical-align: middle;
+}
+.right-main .login-content .login-box .login .login-inner .form .password {
+  margin-top: 12px;
+  background-image: url(../img/sprite_login.png);
+  background-repeat: no-repeat;
+  background-position: -39px -91px;
+}
+.right-main .login-content .login-box .login .login-inner .form .password #pwd {
+  margin-left: 34px;
+  width: 86%;
+  border: none;
+  box-shadow: none;
+  height: 28px;
+  line-height: normal;
+  padding: 0 0 0 2px;
+  vertical-align: middle;
+}
+.right-main .login-content .login-box .login .login-inner .form .rem {
+  margin-top: 12px;
+}
+.right-main .login-content .login-box .login .login-inner .form .rem .rembme {
+  float: left;
+}
+.right-main .login-content .login-box .login .login-inner .form .rem #check-rem {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.right-main .login-content .login-box .login .login-inner .form .rem .miss {
+  float: right;
+  color: #808080;
+}
+.right-main .login-content .login-box .login .login-inner .form .rem .miss:hover {
+  color: #fa7d3c;
+}
+.right-main .login-content .login-box .login .login-inner .form .login-btn {
+  margin-top: 12px;
+}
+.right-main .login-content .login-box .login .login-inner .form .login-btn .btn1 {
+  padding: 0;
+  display: block;
+  font-size: 16px;
+  height: 32px;
+  line-height: 33px;
+  background: #ff8140;
+  border: 1px solid #f77c3d;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  color: #fff;
+}
+.right-main .login-content .login-box .login .login-inner .form .quickreg {
+  margin-top: 12px;
+  height: 15px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+.right-main .login-content .login-box .login .login-inner .form .quickreg #quick-reg {
+  color: #eb7350;
+}
+.right-main .login-content .login-box .login .login-inner .ewm-form .ewm-login-box {
+  position: relative;
+  width: 172px;
+  height: 174px;
+  margin: auto;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-top: 14px;
+}
+.right-main .login-content .login-box .login .login-inner .ewm-form .ewm-login-box img {
+  width: 150px;
+  height: 150px;
+}
+.right-main .login-content .login-box .login .login-inner .ewm-form .quickreg {
+  text-align: center;
+  margin-top: 5px;
+  border: none;
+}
+.right-main .login-content .login-box .login .login-inner .msg-form .phone {
+  background-image: url(../img/sprite_login.png);
+  background-position: -89px -91px;
+  background-repeat: no-repeat;
+}
+.right-main .login-content .login-box .login .login-inner .msg-form .phone #loginname {
+  margin-left: 34px;
+  width: 86%;
+  border: none;
+  box-shadow: none;
+  height: 28px;
+  line-height: normal;
+  padding: 0 0 0 2px;
+  vertical-align: middle;
+}
+.right-main .login-content .login-box .login .login-inner .msg-form .aqu .aqu-yzm {
+  float: left;
+  margin-top: 12px;
+  padding: 0 10px 0 10px;
+  width: 121px;
+  height: 32px;
+  line-height: 33px;
+  background: #f2f2f5;
+  font-size: 12px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+}
+.right-main .login-content .login-box .login .login-inner .msg-form .aqu .yanzhengma {
+  float: right;
+  width: 114px;
+  margin-top: 12px;
+}
+.right-main .login-content .login-box .login .login-inner .msg-form .aqu .yanzhengma #yanzheng {
+  width: 102px;
+  height: 28px;
+  margin-left: 10px;
+  border: none;
+}
+.right-main .login-content .login-box .login .login-inner .hid {
+  display: none;
+}
+.right-main .login-content .login-box .login .login-inner .show {
+  display: block;
+}
+.right-main .login-content .login-box .login .layer {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  left: 1058.5px;
+  /* 155是输入密码 110是输入登录名和手机号码/用户名或密码错误
+          短信验证码left: 1139.5px和top: 156px;*/
+  top: 155px;
+}
+.right-main .login-content .login-box .login .layer .remind {
+  position: relative;
+  padding: 6px 13px 6px 16px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.2);
+}
+.right-main .login-content .login-box .login .layer .remind .r-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+  background-image: url(../img/icon-x3.png);
+  background-size: 625px 325px;
+  background-position: -350px -100px;
+}
+.right-main .login-content .login-box .login .layer .remind .r-close {
+  padding-left: 8px;
+}
+.right-main .login-content .login-box .login .layer .remind .r-arrow {
+  display: inline-block;
+  left: 62.5px;
+  right: auto;
+  bottom: -12px;
+  position: absolute;
+  margin: -1px 0 0 -6px;
+  border-color: #fff transparent transparent transparent;
+  width: 0;
+  height: 0;
+  border-width: 7px;
+  border-style: solid;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: top;
+}
+.hot {
+  width: 340px;
+  text-align: left;
+}
+.hot .hot-topic {
+  background: #f2f2f5;
+  padding: 20px 20px 0 20px;
+  border-top: 1px solid #fa2f2f;
+  margin-bottom: 20px;
+}
+.hot .hot-topic .topic-title {
+  margin-bottom: 16px;
+}
+.hot .hot-topic .topic-content .topic-item {
+  width: 300px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.hot .hot-topic .topic-content .topic-item .t-pic {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+}
+.hot .hot-topic .topic-content .topic-item .t-pic a img {
+  width: 50px;
+  height: 50px;
+}
+.hot .hot-topic .topic-content .topic-item .t-text {
+  display: inline-block;
+  vertical-align: middle;
+  width: 238px;
+}
+.hot .hot-topic .topic-content .topic-item .t-text h3 {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: normal;
+  line-height: 1.5;
+}
+.hot .hot-topic .topic-content .topic-item .t-text .t-des {
+  line-height: 1.5;
+  margin-top: 5px;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #808080;
+}
+.hot .hot-topic .t-more {
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  border-top: 1px solid #d9d9d9;
+  margin-top: 20px;
+}
+.complaint {
+  background: #f2f2f5;
+  padding: 20px;
+  border-top: 1px solid #fa2f2f;
+  margin-bottom: 20px;
+  text-align: left;
+}

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>微博-随时随地发现新鲜事</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- 引入swiper插件 -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="./font/iconfont.css" />
+  </head>
+  <body>
+    <!-- 头部导航栏 -->
+    <nav class="global-nav">
+      <div class="nav">
+        <!-- 导航栏左边 logo和搜索框部分 -->
+        <div class="nav-left">
+          <div class="nav-logo">
+            <a href="javascript:void(0)" class="logo-bg"></a>
+          </div>
+          <div class="search">
+            <input type="text" id="input" placeholder="网信办要求取消所有涉明星艺人榜单" />
+            <a href="javascript:void(0)" class="iconfont icon-sousuo"></a>
+            <div class="dropdown">
+              <div class="hot-search">
+                <div class="plus">
+                  <a class="hs-more">查看完整热搜榜»</a>
+                  <ul class="selectbox">
+                    <li>
+                      <a href="javascript:void(0)"><i class="num-gray num-red">1</i><span class="s-tit"></span></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"><i class="num-gray num-yellow">2</i><span class="s-tit"></span></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"><i class="num-gray">3</i><span class="s-tit"></span></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"><i class="num-gray">4</i><span class="s-tit"></span></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"><i class="num-gray">5</i><span class="s-tit"></span></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"><i class="num-gray">6</i><span class="s-tit"></span></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"><i class="num-gray">7</i><span class="s-tit"></span></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"><i class="num-gray">8</i><span class="s-tit"></span></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"><i class="num-gray">9</i><span class="s-tit"></span></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"><i class="num-gray">10</i><span class="s-tit"></span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 导航栏右边 -->
+        <div class="nav-right">
+          <ul>
+            <li><span class="iconfont icon-shouye"></span><a href="index.html">首页</a></li>
+            <li><span class="iconfont icon-shipin"></span><a>视频</a></li>
+            <li><span class="iconfont icon-faxian"></span><a>发现</a></li>
+            <li><span class="iconfont icon-youxi"></span><a>游戏</a></li>
+            <li><span class="nav-login"></span><a href="register.html">注册</a></li>
+            <i class="nav-line"></i>
+            <li><span class="nav-register"></span><a class="log-btn">登录</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 页面主体部分 -->
+    <div class="main">
+      <!-- 页面中间内容 -->
+      <div class="main-frame clearfix">
+        <!-- 左边固定导航条 -->
+        <div class="main-nav">
+          <ul class="left-nav">
+            <li><a href="javascript:void(0);" class="nav_item current">热门</a></li>
+            <li><a href="javascript:void(0);" class="nav_item">头条</a></li>
+            <li><a href="javascript:void(0);" class="nav_item">视频</a></li>
+            <li><a href="javascript:void(0);" class="nav_item">榜单</a></li>
+            <li><a href="javascript:void(0);" class="nav_item">搞笑</a></li>
+            <li><a href="javascript:void(0);" class="nav_item">社会</a></li>
+            <li><a href="javascript:void(0);" class="nav_item">时尚</a></li>
+            <li><a href="javascript:void(0);" class="nav_item">电影</a></li>
+            <li><a href="javascript:void(0);" class="nav_item">美女</a></li>
+            <li><a href="javascript:void(0);" class="nav_item">体育</a></li>
+            <li><a href="javascript:void(0);" class="nav_item">动漫</a></li>
+          </ul>
+        </div>
+        <!-- 中间博客部分、右边图片部分 -->
+        <div class="main-pic">
+          <!-- 中间博客部分 -->
+          <div class="left-main">
+            <div class="blog">
+              <!-- swiper实现轮播图  -->
+              <div class="blog-silder">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="pic1">
+                        <a href="javascript:void(0)">
+                          <img src="./img/sil11.jpg" />
+                          <div class="pic-info">
+                            <h3>#为什么职场中一定要赏罚分明#</h3>
+                            <h4><span>8976讨论</span><span>2900.3万阅读</span></h4>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="pic2">
+                        <a href="javascript:void(0)">
+                          <img src="./img/sil12.jpg" alt="" />
+                          <div class="pic-info">
+                            <h3>#同龄人的真实收入是怎样的#</h3>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="pic3">
+                        <a href="javascript:void(0)">
+                          <img src="./img/sil13.jpg" alt="" />
+                          <div class="pic-info">
+                            <h3>#如何让小宝贝尽快适应幼儿园#</h3>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="pic1">
+                        <a href="javascript:void(0)">
+                          <img src="./img/sil21.jpg" alt="" />
+                          <div class="pic-info">
+                            <h3>#为什么职场中一定要赏罚分明#</h3>
+                            <h4><span>8976讨论</span><span>2900.3万阅读</span></h4>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="pic2">
+                        <a href="javascript:void(0)">
+                          <img src="./img/sil22.jpg" alt="" />
+                          <div class="pic-info">
+                            <h3>#同龄人的真实收入是怎样的#</h3>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="pic3">
+                        <a href="javascript:void(0)">
+                          <img src="./img/sil23.jpg" alt="" />
+                          <div class="pic-info">
+                            <h3>#如何让小宝贝尽快适应幼儿园#</h3>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="pic1">
+                        <a href="javascript:void(0)">
+                          <img src="./img/sil31.jpg" alt="" />
+                          <div class="pic-info">
+                            <h3>#为什么职场中一定要赏罚分明#</h3>
+                            <h4><span>8976讨论</span><span>2900.3万阅读</span></h4>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="pic2">
+                        <a href="javascript:void(0)">
+                          <img src="./img/sil32.jpg" alt="" />
+                          <div class="pic-info">
+                            <h3>#同龄人的真实收入是怎样的#</h3>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="pic3">
+                        <a href="javascript:void(0)">
+                          <img src="./img/sil33.jpg" alt="" />
+                          <div class="pic-info">
+                            <h3>#如何让小宝贝尽快适应幼儿园#</h3>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <!-- 中间博客部分 -->
+              <div class="blog-content">
+                <!-- <div class="wait">正在加载中请稍等...</div>
+                <div class="wait">不好意思已经加载到底了~~</div> -->
+                <!-- <div class="blog-item">
+                  <div class="blog-pic"><img src="./img/lv4.jpg" alt="" /></div>
+                  <div class="blog-des">
+                    <h3 class="blog-title">
+                      <a href="blog.html" target="_blank" class="b-title">冬日庐山一游：每一道光影都是一种邀请</a>
+                    </h3>
+                    <div class="blog-sub clearfix">
+                      <a href="javascript:void(0)"><img src="./img/freedom.jpg" alt="" /></a>
+                      <a href="javascript:void(0)"><span>文旅天下</span></a>
+                      <span class="time">1月06日 09:05</span>
+                      <span class="fr"><i class="bico iconfont icon-dianzan"></i><i>322</i></span>
+                      <span class="rgt-line fr"></span>
+                      <span class="fr"><i class="bico iconfont icon-pinglun"></i><i>56</i></span>
+                      <span class="rgt-line fr"></span>
+                      <span class="fr"><i class="bico iconfont icon-zhuanfa"></i><i>280</i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="blog-item">
+                  <div class="blog-pic"><img src="./img/recommend1.jpg" alt="" /></div>
+                  <div class="blog-des">
+                    <h3 class="blog-title">
+                      <a href="javascript:void(0)" class="b-title">历代名家山水画中水的画法</a>
+                    </h3>
+                    <div class="blog-sub clearfix">
+                      <a href="javascript:void(0)"><img src="./img/freedom.jpg" alt="" /></a>
+                      <a href="javascript:void(0)"><span>文旅天下</span></a>
+                      <span class="time">1月12日 06:07</span>
+                      <span class="fr"><i class="bico iconfont icon-dianzan"></i><i>38</i></span>
+                      <span class="rgt-line fr"></span>
+                      <span class="fr"><i class="bico iconfont icon-pinglun"></i><i>20</i></span>
+                      <span class="rgt-line fr"></span>
+                      <span class="fr"><i class="bico iconfont icon-zhuanfa"></i><i>280</i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="blog-item">
+                  <div class="blog-pic"><img src="./img/recommend2.jpg" alt="" /></div>
+                  <div class="blog-des">
+                    <h3 class="blog-title">
+                      <a href="javascript:void(0)" class="b-title">玉雕里的山水，美出了一种境界！</a>
+                    </h3>
+                    <div class="blog-sub clearfix">
+                      <a href="javascript:void(0)"><img src="./img/freedom.jpg" alt="" /></a>
+                      <a href="javascript:void(0)"><span>文旅天下</span></a>
+                      <span class="time">2月02日 19:20</span>
+                      <span class="fr"><i class="bico iconfont icon-dianzan"></i><i>38</i></span>
+                      <span class="rgt-line fr"></span>
+                      <span class="fr"><i class="bico iconfont icon-pinglun"></i><i>20</i></span>
+                      <span class="rgt-line fr"></span>
+                      <span class="fr"><i class="bico iconfont icon-zhuanfa"></i><i>280</i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="blog-item">
+                  <div class="blog-pic"><img src="./img/recommend3.jpg" alt="" /></div>
+                  <div class="blog-des">
+                    <h3 class="blog-title">
+                      <a href="javascript:void(0)" class="b-title">突然很想逃离现在的生活，重拾自然的触动！</a>
+                    </h3>
+                    <div class="blog-sub clearfix">
+                      <a href="javascript:void(0)"><img src="./img/freedom.jpg" alt="" /></a>
+                      <a href="javascript:void(0)"><span>文旅天下</span></a>
+                      <span class="time">4月14日 16:30</span>
+                      <span class="fr"><i class="bico iconfont icon-dianzan"></i><i>38</i></span>
+                      <span class="rgt-line fr"></span>
+                      <span class="fr"><i class="bico iconfont icon-pinglun"></i><i>20</i></span>
+                      <span class="rgt-line fr"></span>
+                      <span class="fr"><i class="bico iconfont icon-zhuanfa"></i><i>280</i></span>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- 右边登录框、热门话题部分 -->
+          <div class="right-main">
+            <div class="login-content">
+              <div class="login-box">
+                <div class="login">
+                  <!-- 登录框 -->
+                  <div class="login-inner">
+                    <div class="info clearfix">
+                      <div class="tab cur">帐号登录</div>
+                      <div class="tab">安全登录</div>
+                      <div class="by-ewm"></div>
+                    </div>
+                    <div class="form pwd-form">
+                      <div class="username form-list">
+                        <input id="loginname" class="l-input" type="text" placeholder="邮箱/会员帐号/手机号" />
+                      </div>
+                      <div class="password form-list">
+                        <input id="pwd" class="l-input" type="text" placeholder="请输入密码" />
+                      </div>
+                      <div class="rem clearfix">
+                        <div class="rembme">
+                          <input type="checkbox" id="check-rem" /><span style="vertical-align: middle">记住我</span>
+                        </div>
+                        <a href="javascript:void(0)" class="miss">忘记密码</a>
+                      </div>
+                      <div class="login-btn">
+                        <a href="javascript:void(0)" class="btn1">登录</a>
+                      </div>
+                      <div class="quickreg">
+                        <span>还没有微博？</span>
+                        <a href="register.html" target="_blank" id="quick-reg">立即注册！</a>
+                      </div>
+                    </div>
+                    <div class="form ewm-form hid">
+                      <div class="ewm-login-box">
+                        <img src="./img/ewm-login.png" alt="" />
+                        <p>请用最新版微博客户端扫码</p>
+                      </div>
+                      <div class="quickreg">
+                        <span>还没有微博？</span>
+                        <a href="register.html" target="_blank" id="quick-reg">立即注册！</a>
+                      </div>
+                    </div>
+                    <div class="form msg-form hid">
+                      <div class="phone form-list">
+                        <input id="loginname" class="l-input" type="text" placeholder="手机号码，仅支持大陆手机" />
+                      </div>
+                      <div class="aqu clearfix">
+                        <div class="aqu-yzm">获取短信验证码</div>
+                        <div class="yanzhengma form-list">
+                          <input id="yanzheng" class="l-input" type="text" placeholder="短信验证码" />
+                        </div>
+                      </div>
+                      <div class="rem clearfix">
+                        <div class="rembme">
+                          <input type="checkbox" id="check-rem" /><span style="vertical-align: middle">记住我</span>
+                        </div>
+                        <a href="javascript:void(0)" class="miss">忘记密码</a>
+                      </div>
+                      <div class="login-btn">
+                        <a href="javascript:void(0)" class="btn1">登录</a>
+                      </div>
+                      <div class="quickreg">
+                        <span>还没有微博？</span>
+                        <a href="register.html" target="_blank" id="quick-reg">立即注册！</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 提示登录名/密码不能为空 -->
+                  <div class="layer">
+                    <div class="remind">
+                      <i class="r-icon"></i><span class="r-txt">请输入密码</span
+                      ><a class="r-close" href="javascript:void(0)">X</a>
+                      <div class="r-arrow"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hot">
+              <div class="hot-topic">
+                <h2 class="topic-title">微博热门话题</h2>
+                <div class="topic-content">
+                  <div class="topic-item">
+                    <div class="t-pic">
+                      <a href="javascript:void(0)"><img src="./img/t-pic1.jpg" alt="" /></a>
+                    </div>
+                    <div class="t-text">
+                      <h3><a href="javascript:void(0)">#阿富汗总统已逃离喀布尔意味着什么#</a></h3>
+                      <div class="t-des">1552.5万阅读 4254讨论</div>
+                    </div>
+                  </div>
+                  <div class="topic-item">
+                    <div class="t-pic">
+                      <a href="javascript:void(0)"><img src="./img/t-pic2.jpg" alt="" /></a>
+                    </div>
+                    <div class="t-text">
+                      <h3><a href="javascript:void(0)">#你觉得谈恋爱麻烦吗#</a></h3>
+                      <div class="t-des">5565.6万阅读 6.7万讨论</div>
+                    </div>
+                  </div>
+                  <div class="topic-item">
+                    <div class="t-pic">
+                      <a href="javascript:void(0)"><img src="./img/t-pic3.jpg" alt="" /></a>
+                    </div>
+                    <div class="t-text">
+                      <h3><a href="javascript:void(0)">#如何从法律角度看待吴亦凡因涉嫌强奸罪被批捕#</a></h3>
+                      <div class="t-des">460.4万阅读 1.4万讨论</div>
+                    </div>
+                  </div>
+                  <div class="topic-item">
+                    <div class="t-pic">
+                      <a href="javascript:void(0)"><img src="./img/t-pic4.jpg" alt="" /></a>
+                    </div>
+                    <div class="t-text">
+                      <h3><a href="javascript:void(0)">#全职带娃是什么感受#</a></h3>
+                      <div class="t-des">3917.6万阅读 8914讨论</div>
+                    </div>
+                  </div>
+                  <div class="topic-item">
+                    <div class="t-pic">
+                      <a href="javascript:void(0)"><img src="./img/t-pic5.jpg" alt="" /></a>
+                    </div>
+                    <div class="t-text">
+                      <h3><a href="javascript:void(0)">#同龄人的真实收入是怎样的#</a></h3>
+                      <div class="t-des">1.7亿阅读 2.2万讨论</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="t-more"><a href="javascript:void(0)" target="_blank">查看更多 ></a></div>
+              </div>
+              <div class="hot-topic">
+                <h2 class="topic-title">微博实时热点</h2>
+                <div class="topic-content">
+                  <div class="topic-item">
+                    <div class="t-pic">
+                      <a href="javascript:void(0)"><img src="./img/t-pic6.jpg" alt="" /></a>
+                    </div>
+                    <div class="t-text">
+                      <h3><a href="javascript:void(0)">#17岁少年买不到回国机票攻击系统#</a></h3>
+                      <div class="t-des">
+                        【获刑4年！#17岁少年买不到回国机票攻击系统#：“因疫情严重和女朋友怀孕压力大”】落网后，17岁的小陈声称，自己上完小学三年级后便辍学打工，自15岁起自学数字货币开发、大数据、区块链技术、人工智能，本是一名努力上进的青少年，由于出国后受疫情影响滞留国外，当时自己年纪小又发烧，害怕被感染
+                        ​​​​
+                      </div>
+                    </div>
+                  </div>
+                  <div class="topic-item">
+                    <div class="t-pic">
+                      <a href="javascript:void(0)"><img src="./img/vote.png" alt="" /></a>
+                    </div>
+                    <div class="t-text">
+                      <h3><a href="javascript:void(0)">#霍尊工作室去年已注销#</a></h3>
+                      <div class="t-des">#霍尊工作室去年已注销# http://t.cn/A6IXEhmN ​​​​</div>
+                    </div>
+                  </div>
+                  <div class="topic-item">
+                    <div class="t-pic">
+                      <a href="javascript:void(0)"><img src="./img/vote.png" alt="" /></a>
+                    </div>
+                    <div class="t-text">
+                      <h3><a href="javascript:void(0)">孙兴赶紧被抓</a></h3>
+                      <div class="t-des">
+                        #孙兴赶紧被抓#
+                        张艺兴孙红雷主演扫黑风暴热播！网友反馈剧情内容很直接过瘾，但目前剧情稍显拖沓，黄希那条线略显多余，你觉得扫黑风暴好看吗？
+                        http://t.cn/A6IXQmwM ​​​​
+                      </div>
+                    </div>
+                  </div>
+                  <div class="topic-item">
+                    <div class="t-pic">
+                      <a href="javascript:void(0)"><img src="./img/t-pic7.jpg" alt="" /></a>
+                    </div>
+                    <div class="t-text">
+                      <h3><a href="javascript:void(0)">#吴亦凡被批捕#</a></h3>
+                      <div class="t-des">
+                        【#吴亦凡被批捕#】2021年8月16日，北京市朝阳区人民检察院经依法审查，对犯罪嫌疑人吴某凡以涉嫌强奸罪批准逮捕。（人民日报记者张璁）#朝阳检方以涉嫌强奸罪批捕吴亦凡#
+                        ​​​​
+                      </div>
+                    </div>
+                  </div>
+                  <div class="topic-item">
+                    <div class="t-pic">
+                      <a href="javascript:void(0)"><img src="./img/t-pic8.jpg" alt="" /></a>
+                    </div>
+                    <div class="t-text">
+                      <h3><a href="javascript:void(0)">#律师解读吴亦凡被批捕#</a></h3>
+                      <div class="t-des">
+                        【#吴亦凡被批捕说明了什么#？#律师解读吴亦凡被批捕#】16日，据通报，#吴亦凡被批捕#。遍览多个实锤后，公众的目光聚焦到了该案的法律问题上：一般满足什么条件才能批捕？从刑拘到批捕需要哪些流程？外籍身份是否会影响批捕流程？批捕之后，下一步可能是什么？律师解读案件各环节的关键信息>>
+                        ​​​​
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="t-more"><a href="javascript:void(0)">查看更多 ></a></div>
+              </div>
+            </div>
+            <div class="complaint">
+              <a href="">DMCA投诉/Report ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 刷新框 -->
+      <a id="flush" href="javascript:void(0);"><i class="ficon iconfont icon-shuaxin"></i></a>
+      <!-- 直达顶部框 -->
+      <a id="totop" href="javascript:void(0);"><i class="ficon iconfont icon-huidaodingbu"></i></a>
+    </div>
+
+    <!-- 尾部部分 -->
+    <footer>
+      <div class="footer-link">
+        <dl class="link-list">
+          <dt>微博精彩</dt>
+          <dd>
+            <a class="link-a" href="javascript:void(0)">热门微博</a
+            ><a class="link-a" href="javascript:void(0)">热门话题</a>
+          </dd>
+          <dd>
+            <a class="link-a" href="javascript:void(0)">微博会员</a
+            ><a class="link-a" href="javascript:void(0)">微相册</a>
+          </dd>
+          <dd>
+            <a class="link-a" href="javascript:void(0)">微游戏</a><a class="link-a" href="javascript:void(0)">微指数</a>
+          </dd>
+        </dl>
+        <dl class="link-list">
+          <dt>手机玩微博</dt>
+          <dd>
+            <img class="link-erweima" src="./img/footer_code_v2.png" alt="二维码" />
+            <p>扫码下载，更多版本<br />戳这里</p>
+          </dd>
+        </dl>
+        <dl class="link-list">
+          <dt>认证&合作</dt>
+          <dd>
+            <a class="link-a" href="javascript:void(0)">申请认证</a
+            ><a class="link-a" href="javascript:void(0)">链接网站</a>
+          </dd>
+          <dd>
+            <a class="link-a" href="javascript:void(0)">企业微博</a
+            ><a class="link-a" href="javascript:void(0)">广告服务</a>
+          </dd>
+          <dd><a class="link-a" href="javascript:void(0)">微博标识</a><a href="javascript:void(0)">广告代理商</a></dd>
+          <dd><a class="link-a" href="javascript:void(0)">开放平台</a></dd>
+        </dl>
+        <dl class="link-list">
+          <dt>微博帮助</dt>
+          <dd><a class="link-a" href="javascript:void(0)">热门微博</a></dd>
+          <dd><a class="link-a" href="javascript:void(0)">自助服务</a></dd>
+          <dd><a href="javascript:void(0)">企业&商业热线</a></dd>
+          <dd><a href="javascript:void(0)">4000-980-980</a></dd>
+        </dl>
+      </div>
+      <div class="other-link">
+        <p class="copyright">
+          <a class="link-txt" href="javascript:void(0)"><i class="weibo-ico"></i><i>微博客服</i></a
+          ><span class="link-txt">客服热线4000-960-960</span><span class="link-txt">违规内容投诉咨询010-60618076</span
+          ><span class="link-txt">意见反馈</span><span class="link-txt">舞弊举报</span
+          ><span class="link-txt">开放平台</span><span class="link-txt">微博招聘</span
+          ><span class="link-txt">新浪网导航</span><span class="link-txt">投诉处理大厅</span
+          ><span class="link-txt">DMCA投诉/Report</span>
+          <select node-type="changeLanguage" suda-data="key=tblog_home_click&amp;value=language_versions_click">
+            <option value="zh-cn" selected="">中文(简体)</option>
+            <option value="zh-tw">中文(臺灣)</option>
+            <option value="zh-hk">中文(香港)</option>
+            <option value="en">English</option>
+          </select>
+        </p>
+        <p class="copyright">
+          <a class="link-txt" href="javascript:void(0)">京ICP证100780号</a
+          ><span class="link-txt">互联网药品服务许可证</span><span class="link-txt">互联网医疗保健许可证</span
+          ><span class="link-txt">京网文〔2020〕4754-886号</span
+          ><a class="link-txt" href="javascript:void(0)">京ICP备12002058号-2</a
+          ><span class="link-txt">增值电信业务经营许可证B2-20140447</span>
+        </p>
+        <p class="copyright">
+          <a href="javascript:void(0)" class="link-txt">中国互联网举报中心</a
+          ><a href="javascript:void(0)" class="link-txt">北京互联网举报中心</a
+          ><a href="javascript:void(0)" class="link-txt">网络110报警服务</a
+          ><a href="javascript:void(0)" class="link-txt">北京文化市场举报热线</a
+          ><a href="javascript:void(0)" class="link-txt">中国互联网协会</a
+          ><a href="javascript:void(0)" class="link-txt">北京网络行业协会</a
+          ><a href="javascript:void(0)" class="link-txt">扫黄打非举报入口</a
+          ><a href="javascript:void(0)" class="link-txt">网络谣言曝光台</a>
+        </p>
+        <p class="copyright">
+          <a class="link-txt" href="javascript:void(0)">互联网新闻信息服务许可编号:11220190001</a
+          ><span class="copyright link-txt"
+            >Copyright © 2009-2021 WEIBO
+            <a class="link-txt" href="javascript:void(0)">北京微梦创科网络技术有限公司</a></span
+          ><a class="link-txt" href="javascript:void(0)"><i class="security-ico"></i>京公网安备11000002000019号</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- 登陆弹窗 -->
+    <div id="login-alert" class="login-alert">
+      <div class="alert-box">
+        <div class="login-inner">
+          <div class="info clearfix">
+            <div class="tab cur">帐号登录</div>
+            <div class="tab">安全登录</div>
+            <div class="by-ewm"></div>
+          </div>
+          <div class="form pwd-form">
+            <div class="username form-list">
+              <input id="loginname" class="l-input" type="text" placeholder="邮箱/会员帐号/手机号" />
+            </div>
+            <div class="password form-list">
+              <input id="pwd" class="l-input" type="text" placeholder="请输入密码" />
+            </div>
+            <div class="rem clearfix">
+              <div class="rembme">
+                <input type="checkbox" id="check-rem" /><span style="vertical-align: middle">记住我</span>
+              </div>
+              <a href="javascript:void(0)" class="miss">忘记密码</a>
+            </div>
+            <div class="login-btn">
+              <a href="javascript:void(0)" class="btn1">登录</a>
+            </div>
+            <div class="qqbtn">
+              <a href="javascript:void(0)" id="useqq">使用QQ直接登录</a>
+            </div>
+            <div class="quickreg">
+              <span>还没有微博？</span>
+              <a href="register.html" target="_blank" id="quick-reg">立即注册！</a>
+            </div>
+          </div>
+          <div class="form ewm-form hid">
+            <div class="ewm-login-box">
+              <img src="./img/ewm-login.png" alt="" />
+              <p>请用最新版微博客户端扫码</p>
+            </div>
+          </div>
+          <div class="form msg-form hid">
+            <div class="phone form-list">
+              <input id="loginname" class="l-input" type="text" placeholder="手机号码，仅支持大陆手机" />
+            </div>
+            <div class="aqu clearfix">
+              <div class="aqu-yzm">获取短信验证码</div>
+              <div class="yanzhengma form-list">
+                <input id="yanzheng" class="l-input" type="text" placeholder="短信验证码" />
+              </div>
+            </div>
+            <div class="rem clearfix">
+              <div class="rembme">
+                <input type="checkbox" id="check-rem" /><span style="vertical-align: middle">记住我</span>
+              </div>
+              <a href="javascript:void(0)" class="miss">忘记密码</a>
+            </div>
+            <div class="login-btn">
+              <a href="javascript:void(0)" class="btn1">登录</a>
+            </div>
+            <div class="quickreg">
+              <span>还没有微博？</span>
+              <a href="register.html" target="_blank" id="quick-reg">立即注册！</a>
+            </div>
+          </div>
+        </div>
+        <div class="layer2">
+          <div class="remind">
+            <i class="r-icon"></i><span class="r-txt">请输入密码</span
+            ><a class="r-close" href="javascript:void(0)">X</a>
+            <div class="r-arrow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="close-alert">
+        <a href="javascript:void(0)" class="close">X</a>
+      </div>
+    </div>
+    <!-- 页面变暗 -->
+    <div id="shadow" class="shadow_css"></div>
+
+    <!-- 引入库文件 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- 引入js -->
+    <script src="js/common.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/users.js"></script>
+    <script src="js/silder.js"></script>
+    <!-- ajax请求热搜数据 -->
+    <script src="./js/search.js"></script>
+    <!-- 懒加载博客数据 -->
+    <script src="js/index.js"></script>
+    <script src="data/new.js"></script>
+  </body>
+</html>

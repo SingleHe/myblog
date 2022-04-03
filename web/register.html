@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>微博注册</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/register.css"/>
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="./font/iconfont.css"/>
+</head>
+<body>
+<!-- 页面头部 -->
+<div class="head">
+    <div class="red-line"></div>
+    <div class="cloud">
+        <div class="biglogo"></div>
+    </div>
+</div>
+
+<!-- 注册框 -->
+<form action="/myblog/register" method="post" id="reg_form">
+    <div class="register-box">
+        <div class="tab-line">
+            <a href="javascript:void(0)">新用户注册</a>
+        </div>
+        <div class="reg-form">
+            <div class="register-center-form">
+                <div class="rf-list clearfix">
+                    <div class="tit">手机:</div>
+                    <input type="text" id="phone"/>
+                    <!-- 手机号长度11位，以13/14/15/16/17/18/19开头 橙色-->
+                    <!-- 手机号不能为空 橙色-->
+                    <!-- 手机号已经注册，可以直接登录 橙色 -->
+                    <!--  手机号正确 绿色-->
+                    <div class="tips tip1">
+                        <div class="notice"><i class="rf-icon"></i><i class="rf-txt">请输入手机号</i></div>
+                    </div>
+                </div>
+                <div class="rf-list clearfix">
+                    <div class="tit">密码:</div>
+                    <input type="text" id="password"/>
+                    <div class="tips tip2">
+                        <!-- 密码不能为空 -->
+                        <!-- 密码强度 -->
+                        <div class="notice"><i class="rf-icon"></i><i class="rf-txt">请输入密码</i></div>
+                    </div>
+                </div>
+                <div class="rf-list clearfix">
+                    <div class="tit">确认密码:</div>
+                    <input type="text" id="passrepeat"/>
+                    <div class="tips tip3">
+                        <!-- 密码不能为空 -->
+                        <!-- 密码错误 弱 中 强 -->
+                        <!-- 密码正确 绿色 -->
+                        <div class="notice"><i class="rf-icon"></i><i class="rf-txt">请输入密码</i></div>
+                    </div>
+                </div>
+                <div class="rf-list clearfix">
+                    <div class="tit">验证码:</div>
+                    <button class="messbtn">免费获取短信激活码</button>
+                    <input type="text" id="mess"/>
+                    <div class="tips tip4">
+                        <!-- 验证码不能为空 橙色-->
+                        <!-- 验证码不正确 橙色-->
+                        <!-- 验证码正确 绿色 -->
+                        <div class="notice"><i class="rf-icon"></i><i class="rf-txt">请输入验证码</i></div>
+                    </div>
+                </div>
+                <div class="yanzhengma"></div>
+                <!--<div id="fastreg">立即注册</div>-->
+                <input type="submit" id="fastreg" value="立即注册"/>
+            </div>
+            <div class="reg-success">
+                <i class="iconfont icon-zhucechenggong"></i>
+                <div class="time">注册成功，页面<span class="second">3</span>秒钟之后跳转...</div>
+            </div>
+        </div>
+        <div class="reg-sidebar">
+            <p class="p1 line">已有帐号，<a href="index.html">直接登录»</a></p>
+            <p>微博注册帮助</p>
+            <div class="reg_help">
+                <ul class="help_list">
+                    <li><i>1</i><a href="javascript:void(0)">注册微博账号的常见问题</a></li>
+                    <li><i>2</i><a href="javascript:void(0)">手机号/邮箱在注册微博时提示已被注册</a></li>
+                    <li><i>3</i><a href="javascript:void(0)">进行短信验证时没有收到验证码，该怎么办？</a></li>
+                    <li><i>4</i><a href="javascript:void(0)">注册提示频繁怎么办？</a></li>
+                </ul>
+                <a href="javascript:void(0)" class="help_more">更多帮助»</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- 页面尾部 -->
+<div class="foot">
+    <div class="left_link">
+        <i class="footer_logo"></i>
+        <a href="javascript:void(0)"><em class="company_name">北京微梦创科网络技术有限公司</em></a>
+        <a href="javascript:void(0)">京网文〔2020〕4754-886号</a>
+        <a href="javascript:void(0)">京ICP备12002058号-2</a>
+    </div>
+    <div class="copy">
+        <span>Copyright © 2009-2021 WEIBO</span>
+        <select id="pl_content_changeLanguage" action-data="login=0">
+            <option selected="selected" value="zh-cn">中文(简体)</option>
+            <option value="zh-tw">中文(台湾)</option>
+            <option value="zh-hk">中文(香港)</option>
+            <option value="en-us">English</option>
+        </select>
+    </div>
+</div>
+
+<!-- 引入库文件 -->
+<script src="js/jquery-1.12.4.min.js"></script>
+<!-- 引入js文件 -->
+<script src="js/register.js"></script>
+<script src="js/users.js"></script>
+</body>
+</html>
