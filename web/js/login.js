@@ -1,11 +1,11 @@
 $(function () {
   // 如果cookie有数据则点进去就是主页home.html
-  iflogin()
+  /*iflogin()
   function iflogin() {
     if (getCookie('phone')) {
       window.location.href = './home.html'
     }
-  }
+  }*/
   // 点击登录出现弹窗
   $('.log-btn').click(function () {
     $('.shadow_css,.login-alert').css('display', 'block')
@@ -42,16 +42,18 @@ $(function () {
     } else {
       // 账号密码都输入了就开始验证
       // 匹配cookie数据
-      if ($phone == getCookie('phone') && $password == getCookie('password')) {
+      /*if ($phone == getCookie('phone') && $password == getCookie('password')) {
         // 满足条件跳转页面
         window.location.href = './home.html'
+
       } else {
         // 匹配错误提示用户名或密码错误
         $(this).parents('.login-inner').next('.layer').css({ display: 'block', top: '110px' })
         $(this).parents('.login-inner').next('.layer').find('.r-txt').text('用户名或密码错误')
         $(this).parents('.login-inner').next('.layer2').css({ display: 'block', top: '54px' })
         $(this).parents('.login-inner').next('.layer2').find('.r-txt').text('用户名或密码错误')
-      }
+      }*/
+      $('#login_form').submit();//提交表单
     }
   })
 })

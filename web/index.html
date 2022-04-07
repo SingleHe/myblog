@@ -282,6 +282,7 @@
           <div class="right-main">
             <div class="login-content">
               <div class="login-box">
+                <form method="post" action="/myblog/login" id="login_form">
                 <div class="login">
                   <!-- 登录框 -->
                   <div class="login-inner">
@@ -292,10 +293,10 @@
                     </div>
                     <div class="form pwd-form">
                       <div class="username form-list">
-                        <input id="loginname" class="l-input" type="text" placeholder="邮箱/会员帐号/手机号" />
+                        <input id="loginname" name="loginName" class="l-input" type="text" placeholder="邮箱/会员帐号/手机号" />
                       </div>
                       <div class="password form-list">
-                        <input id="pwd" class="l-input" type="text" placeholder="请输入密码" />
+                        <input id="pwd" type="password" name="password" class="l-input" type="text" placeholder="请输入密码" />
                       </div>
                       <div class="rem clearfix">
                         <div class="rembme">
@@ -323,12 +324,12 @@
                     </div>
                     <div class="form msg-form hid">
                       <div class="phone form-list">
-                        <input id="loginname" class="l-input" type="text" placeholder="手机号码，仅支持大陆手机" />
+                        <input id="loginname" name="phone" class="l-input" type="text" placeholder="手机号码，仅支持大陆手机" />
                       </div>
                       <div class="aqu clearfix">
                         <div class="aqu-yzm">获取短信验证码</div>
                         <div class="yanzhengma form-list">
-                          <input id="yanzheng" class="l-input" type="text" placeholder="短信验证码" />
+                          <input id="yanzheng" name="verifyCode" class="l-input" type="text" placeholder="短信验证码" />
                         </div>
                       </div>
                       <div class="rem clearfix">
@@ -356,6 +357,7 @@
                     </div>
                   </div>
                 </div>
+                </form>
               </div>
             </div>
 
@@ -587,10 +589,10 @@
           </div>
           <div class="form pwd-form">
             <div class="username form-list">
-              <input id="loginname" class="l-input" type="text" placeholder="邮箱/会员帐号/手机号" />
+              <input id="loginname" name="loginName" class="l-input" type="text" placeholder="邮箱/会员帐号/手机号" />
             </div>
             <div class="password form-list">
-              <input id="pwd" class="l-input" type="text" placeholder="请输入密码" />
+              <input id="pwd" name="password" class="l-input" type="text" placeholder="请输入密码" />
             </div>
             <div class="rem clearfix">
               <div class="rembme">

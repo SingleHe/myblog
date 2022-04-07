@@ -1,10 +1,11 @@
-package cn.edu.gzy;
+package cn.edu.gzy.controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -15,7 +16,7 @@ import java.util.regex.Pattern;
 
 @WebServlet("/register")
 public class Register extends HttpServlet {
-    private final String USERS = "C:/Users/Blog/users";
+    private final String USERS = "D:/WorkSpace/Data/blog/users";
     private final String SUCCESS_PATH = "register_success.view";
     private final String ERROR_PATH = "register_error.view";
     // ():圆括号()是组，主要应用在限制多选结构的范围/分组/捕获文本/环视/特殊模式处理
@@ -40,6 +41,7 @@ public class Register extends HttpServlet {
         String phone = req.getParameter("phone");
         String password = req.getParameter("password");
         String confirmPwd = req.getParameter("confirmPwd");
+        System.out.printf("后台获取的注册手机号:%s，密码：%s,确认密码：%s",phone,password,confirmPwd);
         List<String> errors = new ArrayList<>();
         if(!validatePhone(phone)){
             errors.add("未填写手机号码或手机号码不正确！");
@@ -77,9 +79,14 @@ public class Register extends HttpServlet {
      * @param password
      */
     private void createUser(Path userHome, String phone, String password) throws IOException{
+        Files.createDirectories(userHome);
         int salt = (int)(Math.random() * 100);//随机生成0-100之间的整数
-        String encrypt = String.valueOf(salt + password.hashCode());
-        Path profile = userHome.resolve("profile");
+        String encrypt = String.valueOf(salt + password.hashCode());//密码做了简单的加密处理。
+        Path profile = userHome.resolve("profile.txt");
+        System.out.println("保存账号密码的文件路径为:"+profile.toAbsolutePath());
+        try(BufferedWriter bufferedWriter = Files.newBufferedWriter(profile)){
+            bufferedWriter.write(String.format("%s\t%s\t%d",phone,encrypt,salt));
+        }
     }
 
     /**

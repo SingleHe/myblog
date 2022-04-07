@@ -183,6 +183,7 @@ $(function () {
   })
 
   $('#reg_form').submit(function () {
+    var flag = true; 
     // 如果哪个文本框没有输入内容则提示
     $('input').each(function () {
       if (!$(this).val()) {
@@ -192,10 +193,10 @@ $(function () {
         $(this).next('.tip2').find('.rf-txt').addClass('level1').text('密码不能为空')
         $(this).next('.tip3').find('.rf-txt').addClass('level1').text('确认密码不能为空')
         $(this).next('.tip4').find('.rf-txt').addClass('level1').text('验证码不能为空')
-        return false;
+        flag = false;
       }
     })
-    return true;
+    return flag;
   })
   // 点击注册跳转页面
   /*$('#fastreg').click(function () {

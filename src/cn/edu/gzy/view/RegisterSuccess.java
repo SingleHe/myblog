@@ -9,8 +9,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet("/register_error.view")
-public class RegisterError extends HttpServlet {
+@WebServlet("/register_success.view")
+public class RegisterSuccess extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
@@ -19,18 +19,13 @@ public class RegisterError extends HttpServlet {
         out.println("<html>");
         out.println("<head>");
         out.println("<meta charset='UTF-8'>");
-        out.println("<title>注册账号失败</title>");
+        out.println("<title>注册账号成功</title>");
         out.println("</head>");
         out.println("<body>");
-        out.println("<h1>注册账号失败！</h1>");
-        out.println("<ul style='color:red;'>");
-        List<String> errors = (List<String>) req.getAttribute("errors");
-        errors.forEach(error -> {
-            out.printf("<li>%s</li>",error);
-        });
-        out.println("</ul>");
-        out.println("<a href='register.html'>返回注册页面</a>");
+        out.printf("<h1>恭喜您，%s！注册账号成功！</h1>",req.getParameter("phone"));
+        out.println("<a href='index.html'>返回登录首页登录</a>");
         out.println("</body>");
+        out.println("</html>");
     }
 
     @Override
