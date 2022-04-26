@@ -589,7 +589,7 @@ layer.msg('评论成功，<span class="jinsom-gold-icon"></span> '+ajax_url_a.co
 layer.msg('评论成功！');
 }
 $('#post_comments'+post_id).val('');
-$(obj).parent('#author_textarea').next('.post_comment_list').prepend('<li><div class="avatar">'+avatar+ajax_url_a.verify+'</div><div class="reply"><div class="pc_comment_info"><a href="/?author='+user_id+'?info=home">'+name+'</a>'+ajax_url_a.lv+ajax_url_a.vip+ajax_url_a.honor+'</div><div class="pc_comment_time">刚刚</div></div><div class="comment_body">'+msg+'</div></li>');   
+$(obj).parent('#author_textarea').next('.post_comment_list').prepend('<li><div class="avatar">'+avatar+ajax_url_a.verify+'</div><div class="reply"><div class="pc_comment_info"><a href='+user_id+'"/?author=?info=home">'+name+'</a>'+ajax_url_a.lv+ajax_url_a.vip+ajax_url_a.honor+'</div><div class="pc_comment_time">刚刚</div></div><div class="comment_body">'+msg+'</div></li>');
 
 }
 },
@@ -822,7 +822,7 @@ vip='';
 layer.msg('已成功打赏'+reward_number+credit_name+'！');
 function d(){
 layer.closeAll();
-$('#post_comments'+post_id).parent('#author_textarea').next('.post_comment_list').prepend('<li><div class="avatar">'+avatar+'</div><div class="reply"><div class="pc_comment_info"><a href="/?author='+user_id+'?info=home">'+name+'</a>'+vip+'</div><div class="pc_comment_time">刚刚</div></div><div class="comment_body"><span class="redbag_icon"></span>打赏了'+reward_number+credit_name+'</div></li>');   
+$('#post_comments'+post_id).parent('#author_textarea').next('.post_comment_list').prepend('<li><div class="avatar">'+avatar+'</div><div class="reply"><div class="pc_comment_info"><a href='+user_id+'"/?author=?info=home">'+name+'</a>'+vip+'</div><div class="pc_comment_time">刚刚</div></div><div class="comment_body"><span class="redbag_icon"></span>打赏了'+reward_number+credit_name+'</div></li>');
 
 }
 setTimeout(d,2500);

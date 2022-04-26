@@ -26,7 +26,8 @@ public class Login extends HttpServlet {
         String loginName = req.getParameter("loginName");
         String password = req.getParameter("password");
         if(login(loginName,password)){
-            req.getRequestDispatcher("/WEB-INF/admin/index.html").forward(req,resp);
+            //req.getRequestDispatcher("/admin/index.html").forward(req,resp);
+            resp.sendRedirect("/myblog/admin/index.html");
         }else{
             resp.sendRedirect("error.html");
         }
