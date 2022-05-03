@@ -14,11 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
-@WebServlet(urlPatterns = {"/register"})
+@WebServlet(name = "RegisterServlet",urlPatterns = {"/register"})
 public class RegisterServlet extends HttpServlet {
     private final String USERS = "D:/WorkSpace/Data/blog/users";
-    private final String SUCCESS_PATH = "/myblog/reg_success";
-    private final String ERROR_PATH = "/myblog/reg_error";
+    private final String SUCCESS_PATH = "/reg_success";
+    private final String ERROR_PATH = "/reg_error";
     // ():圆括号()是组，主要应用在限制多选结构的范围/分组/捕获文本/环视/特殊模式处理
     // +:匹配前面的子表达式一次或多次。
     //*:匹配前面的子表达式零次或多次。

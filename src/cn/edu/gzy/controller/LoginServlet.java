@@ -11,7 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-@WebServlet("/login")
+@WebServlet(name="LoginServlet",urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     private final String USERS = "D:/WorkSpace/Data/blog/users";
     @Override
