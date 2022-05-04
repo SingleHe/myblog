@@ -15,12 +15,16 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
 
+/**
+ * 登录成功后，跳转到本servlet,主要负责视图中需要显示的微博数据。
+ */
 @WebServlet(name="MemberServlet", urlPatterns = "/member")
 public class MemberServlet extends HttpServlet {
     //定义微博信息的保存路径
-    private final String USERS = "D:/WorkSpace/Data/blog/users/";
+    //private final String USERS = "D:/WorkSpace/Data/blog/users/";
+    private final String USERS = "C:/Code/Data/blog/users";
     //显示微博详情页
-    private final String MEMBER_PATH = "/showMemeber";
+    private final String MEMBER_PATH = "/showMember";
     private final String LOGIN_PATH="/myblog/index.html";
 
     @Override
@@ -40,7 +44,7 @@ public class MemberServlet extends HttpServlet {
             return;
         }
         Map<Long,String> messages = messages(getUsername(req));//获取微博信息
-        req.setAttribute("message",messages);
+        req.setAttribute("messages",messages);
         req.getRequestDispatcher(MEMBER_PATH).forward(req,resp);//将数据连同请求转发给负责显示页面的servlet,来显示微博信息。
     }
 
@@ -67,11 +71,11 @@ public class MemberServlet extends HttpServlet {
         //Comparator.reverseOrder是Java 8中引入的一个静态方法，它返回比较器，对对象集合进行反向自然排序。
         Map<Long, String> messages = new TreeMap<>(Comparator.reverseOrder());
         //显示指定目录中的所有.txt文件
-        try(DirectoryStream<Path> txts = Files.newDirectoryStream(userHome, "*.txt")){
-            for(Path txt : txts){
-                String millis = txt.getFileName().toString().replace("*.txt", "");//获得文件名，这里保存的时候，文件名用的是自1970年1月1日0时0分以来的毫秒数
+        try(DirectoryStream<Path> logs = Files.newDirectoryStream(userHome, "*.log")){
+            for(Path log : logs){
+                String millis = log.getFileName().toString().replace(".log", "");//获得文件名，这里保存的时候，文件名用的是自1970年1月1日0时0分以来的毫秒数
                 //从文件中读取字节流，并用系统分隔符进行连接
-                String msg = Files.readAllLines(txt).stream()
+                String msg = Files.readAllLines(log).stream()
                         .collect(Collectors.joining(System.lineSeparator()));
                 messages.put(Long.parseLong(millis),msg);
             }

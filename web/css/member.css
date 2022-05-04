@@ -3,7 +3,7 @@ body {
     font-size: 13px
 }
 
-li,td {Arial , Helvetica, sans-serif;
+li,td {font-family:Arial, Helvetica, sans-serif;
     font-size: 13px
 }
 
@@ -22,9 +22,14 @@ a {
 	width : 250px;
 	float : left;
 }
+.my_icon{
+    width:150px;
+    height: 150px;
+    overflow: hidden;
+}
 
 table {
-	text-align: left; 
-	width: 510px; 
+	text-align: left;
+	width: 510px;
 	height: 88px;
 }

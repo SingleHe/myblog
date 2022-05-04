@@ -16,7 +16,8 @@ import java.util.regex.Pattern;
 
 @WebServlet(name = "RegisterServlet",urlPatterns = {"/register"})
 public class RegisterServlet extends HttpServlet {
-    private final String USERS = "D:/WorkSpace/Data/blog/users";
+    //private final String USERS = "D:/WorkSpace/Data/blog/users";
+    private final String USERS = "C:/Code/Data/blog/users";
     private final String SUCCESS_PATH = "/reg_success";
     private final String ERROR_PATH = "/reg_error";
     // ():圆括号()是组，主要应用在限制多选结构的范围/分组/捕获文本/环视/特殊模式处理

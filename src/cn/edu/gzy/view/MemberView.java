@@ -12,6 +12,9 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Map;
 
+/**
+ * 负责显示微博信息列表页，以及发送微博表单
+ */
 @WebServlet(urlPatterns = "/showMember")
 public class MemberView extends HttpServlet {
     private final String LOGIN_PATH = "index.html";
@@ -46,10 +49,10 @@ public class MemberView extends HttpServlet {
         out.println("<body>");
 
         out.println("<div class='leftPanel'>");
-        out.println("<img src='images/gzy_logo.jpg' alt='新浪微博' /><br><br>");
+        out.println("<img class='my_icon' src='img/gzy_logo.jpg' alt='新浪微博' /><br><br>");
         out.printf("<a href='logout'>登出 %s</a>", username);
         out.println("</div>");
-        // 微博发送框
+        // 微博发送框，将用户填写的微博信息提交给/myblog/new_message处理
         out.println("<form method='post' action='/myblog/new_message'>");
         out.println("分享新鮮事...<br>");
         String preMsg = req.getParameter("msg");//判断是否有预先保留用户输入的微博信息
@@ -76,16 +79,14 @@ public class MemberView extends HttpServlet {
             out.printf("%s<br/>",username);
             out.printf("%s<br>",msg);
             out.println(dateTime);
-            out.println("<form method='post' action='/myblog/delMsg'>");
-            out.printf("<input type='hidden' name='millis' value='%s'",millis);
+            out.println("<form method='post' action='/myblog/del_message'>");
+            out.printf("<input type='hidden' name='millis' value='%s'>",millis);
             out.println("<button type='submit'>删除</button>");
             out.println("</form>");
             out.println("<hr>");
             out.println("</td>");
             out.println("</tr>");
         });
-
-
         out.println("</tbody>");
         out.println("</table>");
         out.println("<hr>");
