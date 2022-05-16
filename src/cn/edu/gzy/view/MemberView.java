@@ -1,5 +1,7 @@
 package cn.edu.gzy.view;
 
+import cn.edu.gzy.listener.OnlineUsers;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -50,6 +52,7 @@ public class MemberView extends HttpServlet {
 
         out.println("<div class='leftPanel'>");
         out.println("<img class='my_icon' src='img/gzy_logo.jpg' alt='新浪微博' /><br><br>");
+        out.printf("<h4>目前在线人数:%d 人</h4>", OnlineUsers.counter);
         out.printf("<a href='logout'>登出 %s</a>", username);
         out.println("</div>");
         // 微博发送框，将用户填写的微博信息提交给/myblog/new_message处理
