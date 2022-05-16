@@ -1,6 +1,9 @@
 package cn.edu.gzy.controller;
 
+import cn.edu.gzy.model.UserService;
+
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +17,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
-@WebServlet(name = "RegisterServlet",urlPatterns = {"/register"})
+@WebServlet(name = "RegisterServlet",urlPatterns = {"/register"},
+            initParams = {
+                @WebInitParam(name = "SUCCESS_PATH", value = "/reg_success"),
+                @WebInitParam(name = "ERROR_PATH", value = "/reg_error")
+            })
 public class RegisterServlet extends HttpServlet {
     //private final String USERS = "D:/WorkSpace/Data/blog/users";
     private final String USERS = "C:/Code/Data/blog/users";
@@ -52,10 +59,13 @@ public class RegisterServlet extends HttpServlet {
         }
         String path;
         if(errors.isEmpty()){
-            path = SUCCESS_PATH;
-            tryCreateUser(phone,password);
+            path = getInitParameter("SUCCESS_PATH");
+            //tryCreateUser(phone,password);
+            UserService userService = (UserService) getServletContext().getAttribute("userService");
+            userService.tryCreateUser(phone,password);
         }else{
-            path = ERROR_PATH;
+            //path = ERROR_PATH;
+            path = getInitParameter("ERROR_PATH");
             req.setAttribute("errors",errors);
         }
         req.getRequestDispatcher(path).forward(req,resp);

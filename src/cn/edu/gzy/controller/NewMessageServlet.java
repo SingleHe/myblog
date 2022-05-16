@@ -1,6 +1,9 @@
 package cn.edu.gzy.controller;
 
+import cn.edu.gzy.model.UserService;
+
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +18,11 @@ import java.time.Instant;
 /**
  * 用于添加用户所发送的微博
  */
-@WebServlet(urlPatterns = "/new_message")
+@WebServlet(urlPatterns = "/new_message",
+    initParams = {
+        @WebInitParam(name="MEMBER_PATH", value = "/myblog/member")
+    }
+)
 public class NewMessageServlet extends HttpServlet {
     //private final String USERS = "D:/WorkSpace/Data/blog/users/";
     private final String USERS = "C:/Code/Data/blog/users";
@@ -23,24 +30,25 @@ public class NewMessageServlet extends HttpServlet {
     private final String MEMBER_PATH = "/myblog/member";//如果微博满足条件，需要交给具体的Servlet去处理。
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if(req.getSession().getAttribute("login") == null){
+        /*if(req.getSession().getAttribute("login") == null){
             resp.sendRedirect(LOGIN_PATH);//未登录，则强制跳转回登录页面
             return ;
-        }
+        }*/
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=utf-8");
         String msg = req.getParameter("msg");//取得用户发送的微博数据
         //如果用户什么都没写，就直接点击了发送按钮
         if(msg == null || msg.length() == 0){
-            resp.sendRedirect("/myblog/member");//如果什么数据都没有，直接跳转回信息界面 。
+            resp.sendRedirect(getInitParameter("MEMBER_PATH"));//如果什么数据都没有，直接跳转回信息界面 。
             return;
         }
         //所发送的微博信息不能超过140个字符
         if(msg.length() <= 140){
-            addMessage(getUsername(req),msg);//添加登录用户发送的微博
-            resp.sendRedirect(MEMBER_PATH);
+            UserService userService = (UserService) getServletContext().getAttribute("userService");
+            userService.addMessage(getUsername(req),msg);//添加登录用户发送的微博
+            resp.sendRedirect(getInitParameter("MEMBER_PATH"));
         }else{
-            req.getRequestDispatcher(MEMBER_PATH).forward(req,resp);
+            req.getRequestDispatcher(getInitParameter("MEMBER_PATH")).forward(req,resp);
         }
 
     }

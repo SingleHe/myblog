@@ -1,6 +1,9 @@
 package cn.edu.gzy.controller;
 
+import cn.edu.gzy.model.UserService;
+
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +21,11 @@ import java.util.stream.Collectors;
 /**
  * 登录成功后，跳转到本servlet,主要负责视图中需要显示的微博数据。
  */
-@WebServlet(name="MemberServlet", urlPatterns = "/member")
+@WebServlet(name="MemberServlet", urlPatterns = "/member",
+    initParams = {
+        @WebInitParam(name = "MEMBER_PATH", value = "/showMember")
+    }
+)
 public class MemberServlet extends HttpServlet {
     //定义微博信息的保存路径
     //private final String USERS = "D:/WorkSpace/Data/blog/users/";
@@ -39,13 +46,15 @@ public class MemberServlet extends HttpServlet {
 
     private void processRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         //判断用户是通过记住密码登录了
-        if(req.getSession().getAttribute("login") == null){
+        /*if(req.getSession().getAttribute("login") == null){
             resp.sendRedirect(LOGIN_PATH);//跳转回登录页面
             return;
-        }
-        Map<Long,String> messages = messages(getUsername(req));//获取微博信息
+        }*/
+        UserService userService = (UserService) getServletContext().getAttribute("userService");
+        //Map<Long,String> messages = messages(getUsername(req));//获取微博信息
+        Map<Long,String> messages = userService.messages(getUsername(req));//获取微博信息
         req.setAttribute("messages",messages);
-        req.getRequestDispatcher(MEMBER_PATH).forward(req,resp);//将数据连同请求转发给负责显示页面的servlet,来显示微博信息。
+        req.getRequestDispatcher(getInitParameter("MEMBER_PATH")).forward(req,resp);//将数据连同请求转发给负责显示页面的servlet,来显示微博信息。
     }
 
 
