@@ -7,6 +7,14 @@
         <param-name>USERS</param-name>
         <param-value>C:/Users/coupl/Desktop/users</param-value>
     </context-param>
+    <!-- 统一配置jsp页面的编码 -->
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+            <default-content-type>text/html</default-content-type>
+        </jsp-property-group>
+    </jsp-config>
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>cn.edu.gzy.controller.LoginServlet</servlet-class>

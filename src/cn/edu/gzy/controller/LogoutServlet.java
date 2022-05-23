@@ -19,12 +19,13 @@ import java.io.IOException;
 public class LogoutServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //如果有对应的登录session
-        /*if(req.getSession().getAttribute("login") != null){
-            req.getSession().invalidate();//手动让session失效。
-        }*/
         //已经由过滤器实现了
         req.getSession().invalidate();
         resp.sendRedirect(getInitParameter("LOGIN_PATH"));//直接跳转回登录界面
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req,resp);
     }
 }

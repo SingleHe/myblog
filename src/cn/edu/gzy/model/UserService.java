@@ -8,9 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Instant;
-import java.util.Comparator;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -87,7 +85,7 @@ public class UserService {
      * @param username
      * @return
      */
-    public Map<Long, String> messages(String username) throws IOException{
+    /*public Map<Long, String> messages(String username) throws IOException{
         //1. 构造保存路径
         Path userHome = Paths.get(USERS, username);
         //构造保存微博信息的Map对象，为了排序，使用了TreeMap
@@ -104,7 +102,26 @@ public class UserService {
             }
         }
         return messages;
+    }*/
+    public List<Message> messages(String username) throws IOException{
+        //1. 构造保存路径
+        Path userHome = Paths.get(USERS, username);
+        //构造保存微博信息的Map对象，为了排序，使用了TreeMap
+        //Comparator.reverseOrder是Java 8中引入的一个静态方法，它返回比较器，对对象集合进行反向自然排序。
+        List<Message> messages = new ArrayList<>();
+        //显示指定目录中的所有.txt文件
+        try(DirectoryStream<Path> logs = Files.newDirectoryStream(userHome, "*.log")){
+            for(Path log : logs){
+                String millis = log.getFileName().toString().replace(".log", "");//获得文件名，这里保存的时候，文件名用的是自1970年1月1日0时0分以来的毫秒数
+                //从文件中读取字节流，并用系统分隔符进行连接
+                String msg = Files.readAllLines(log).stream()
+                        .collect(Collectors.joining(System.lineSeparator()));
+                messages.add(new Message(username, Long.parseLong(millis), msg));
+            }
+        }
+        return messages;
     }
+
 
     /**
      * 将新发表的符合要求的微博，添加到程序中

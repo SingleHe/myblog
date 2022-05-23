@@ -19,7 +19,6 @@ import java.util.Map;
  */
 @WebServlet(urlPatterns = "/showMember")
 public class MemberView extends HttpServlet {
-    private final String LOGIN_PATH = "index.html";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -33,11 +32,6 @@ public class MemberView extends HttpServlet {
 
     private void processRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         req.setCharacterEncoding("utf-8");
-        //1. 判断用户是否登录
-        if(req.getSession().getAttribute("login") == null){
-            resp.sendRedirect(LOGIN_PATH);
-            return;
-        }
         String username = getUsername(req);
         resp.setContentType("text/html;charset=utf-8");
         PrintWriter out = resp.getWriter();
