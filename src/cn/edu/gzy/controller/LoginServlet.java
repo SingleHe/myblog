@@ -21,8 +21,6 @@ import java.nio.file.Paths;
                 }
             )
 public class LoginServlet extends HttpServlet {
-    //private final String USERS = "D:/WorkSpace/Data/blog/users";
-    private final String USERS = "C:/Code/Data/blog/users";
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req, resp);
@@ -49,31 +47,5 @@ public class LoginServlet extends HttpServlet {
             page = getInitParameter("ERROR_PATH");
         }
         resp.sendRedirect(page);
-    }
-
-    private boolean login(String loginName, String password) throws IOException{
-        if(loginName != null && loginName.trim().length() != 0 && password != null){
-            Path userHome = Paths.get(USERS,loginName);
-            return Files.exists(userHome) && isCorrectPassword(password, userHome);
-        }
-        return  false;
-    }
-
-    /**
-     * 判断密码是否正确
-     * @param password
-     * @param userHome
-     * @return
-     * @throws IOException
-     */
-    private boolean isCorrectPassword(String password, Path userHome) throws IOException{
-        Path profile = userHome.resolve("profile.txt");
-        try(BufferedReader bufferedReader = Files.newBufferedReader(profile)){
-            String[] data = bufferedReader.readLine().split("\t");
-            System.out.println("后台获取的密码长度："+data.length);
-            int encrypt = Integer.parseInt(data[1]);
-            int salt = Integer.parseInt(data[2]);
-            return password.hashCode() + salt == encrypt;
-        }
     }
 }
