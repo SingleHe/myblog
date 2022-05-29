@@ -91,5 +91,8 @@ fabric.properties
 # java web complied classes
 web/WEB-INF/classes
 
+# Java Web WEB-INF/classes
+web/WEB-INF/classes/
+
 
 
