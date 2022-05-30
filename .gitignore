@@ -64,6 +64,7 @@ cmake-build-*/
 
 # IntelliJ
 out/
+.idea/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -90,9 +91,6 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 # java web complied classes
 web/WEB-INF/classes
-
-# Java Web WEB-INF/classes
-web/WEB-INF/classes/
 
 
 
